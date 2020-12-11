@@ -49,6 +49,32 @@ fiveLetter = sentence[4];
 temp_sentence = sentence.filter(letter => letter == fiveLetter)
 alert('Result - ' + temp_sentence.length);
 
+//5
+
+var x = prompt("введите число x"), y = prompt("введите число y");
+	if (!isNaN(x)){
+		if(!isNaN(y)){
+		var a = prompt("введите значание от 1до 4, 1 сложение, 2 вычитание, 3 умножение, 4 деление");
+			switch (a) {
+				case "1" :
+					document.write( "сумма чисел " +x +" и " +y +" равна  " + (+x + +y));
+					break;
+				case "2" :
+					document.write("разность чисел " +x +" и " +y +" равна " +(x-y));
+					break;
+				case "3" :
+					document.write("произведение чисел " +x +" и " +y +" равно " +(x*y));
+					break;
+				case "4" :
+					document.write("деление числа " +x +" на " +y +" равно " +(x/y));
+					break;
+				default : document.write ("сказали же, что надо ввести от 1 до 4");
+					break;
+
+			}
+		} else alert("значение y не число")
+	} else alert("значение x не число")
+
 //6
 
 var voltage = prompt("Введите напряжение");
@@ -56,6 +82,37 @@ debug(voltage, "number");
 var amperage = prompt("Введите ток");
 debug(amperage, "number");
 alert(voltage/amperage);
+
+//7
+var r1=prompt("введите значение сопротивления первого проводника"), 
+	r2=prompt("введите значение сопротивления второго проводника"),rPar, rCons;
+	rCons = +r1 + +r2;
+	rPar=(r1*r2)/(r1+r2);
+	if(isNaN(r1) || isNaN(r2)){document.write("надо ввести число")}
+		else {	
+            document.write("сопротивление двух последовательных резисторов равно " +rCons +"<br>" +"сопротивление двух параллельных резисторов равно " +rPar);
+             }
+
+
+//9
+
+var now = new Date();
+	var hours = now.getHours();
+	var time = hours +0.01*now.getMinutes()
+	document.write(time +"<br>");
+	if (time >= 7 && time <= 8){
+		document.write("время завтрака" +"<br>");
+	} else if(time >=13 && time <= 14){
+		document.write("время обеда" +"<br>");
+	} else if(time >=19 && time <= 20){
+		document.write("время ужина" +"<br>");
+	} else if(time >=18 && time <= 23){
+		document.write("время отдыха" + "<br>");
+	}else if(time >=23 && time <= 6.30){
+		document.write("время сна")
+	} else {
+		document.write("время работы")
+	}
 
 //10
 
@@ -96,6 +153,17 @@ if (!isNaN(a)){
 else {
     alert("Проверьте введенные данные")
 }
+
+//18
+
+var count, i=0, firstpref = 1, secondpref = 0;
+	count = prompt("Введите колчичество")
+	while(i < count){ 
+	document.write(secondpref +",");
+	sum = firstpref + secondpref;
+	secondpref = firstpref;
+	firstpref = sum;
+	i++;
 
 //20
 function start20() {
