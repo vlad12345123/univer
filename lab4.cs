@@ -46,14 +46,14 @@ namespace lab4
 
         public int this[int index]
         {
-            set { arr1[index] = value; }
             get { return arr1[index]; }
+            set { arr1[index] = value; }
         }
 
         public int this[short index2]
         {
-            set { arr2[index2] = value; }
             get { return arr2[index2]; }
+            set { arr2[index2] = value; }
         }
     }
 }
