@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +10,19 @@ namespace lab4
     {
         static void Main(string[] args)
         {
-            var classB = new B();
+            B b = new B();
             for (int i = 0; i < 10; i++)
-                Console.Write("{0} ", classB[i]);
+                Console.Write("{0} ", b[i]);
 
             Console.WriteLine();
+
             for (int i = 0; i < 10; i++)
-                Console.Write("{0} \n", classB[(short)i]);
+                Console.Write("{0} \n", b[(short)i]);
 
 
             C<string>.F = "строка";
             C<int>.F = 10;
+
             Console.WriteLine("{0} {1}", C<string>.F, C<int>.F);
 
             Console.ReadKey();
@@ -34,24 +36,24 @@ namespace lab4
 
     class B
     {
-        int[] m1;
-        int[] m2 = new int[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+        int[] arr1;
+        int[] arr2 = new int[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
 
         public B()
         {
-            m1 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            arr1 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         }
 
         public int this[int index]
         {
-            set { m1[index] = value; }
-            get { return m1[index]; }
+            set { arr1[index] = value; }
+            get { return arr1[index]; }
         }
 
         public int this[short index2]
         {
-            set { m2[index2] = value; }
-            get { return m2[index2]; }
+            set { arr2[index2] = value; }
+            get { return arr2[index2]; }
         }
     }
 }
