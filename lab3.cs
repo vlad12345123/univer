@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab3
+namespace lab2
 {
     class Program
     {
@@ -17,8 +17,13 @@ namespace lab3
             Console.WriteLine("Значение поля c2 = " + b.c2);
             B b2 = new B();
             Console.WriteLine("Значение все того же c2 = " + b2.c2); //тут я продемонстрировал работу дефолтного конструктора класса B как и требовал этого таск
-            B b3 = new B(5, 5);
-            Console.WriteLine("Значение поля c2 = " + b3.c2);
+            B b3 = new B(10, 5);
+            Console.WriteLine("\nЗначения массива: ");
+            foreach (var i in b3.array)
+            {
+                Console.Write("{0} ", i);
+            }
+            Console.WriteLine();
         }
     }
 
