@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,6 +49,7 @@ namespace lab2
         public float c2
         {
             get { return c + d; }
+            set { if (d == 10) value = c2; }
         }
 
 
